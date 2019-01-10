@@ -19,6 +19,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
 /**
+ * 针对thymeleaf必须设置viewResolver和templateResolver的编码方式，解决乱码问题
  * @author lxy
  * @time 2019-01-04 22:29
  **/
@@ -64,6 +65,8 @@ public class WebConfig{
         viewResolver.setTemplateEngine(templateEngine());
         // NOTE 'order' and 'viewNames' are optional
         viewResolver.setOrder(1);
+        /** 设置该参数解决thymeleaf的中文乱码的问题*/
+        viewResolver.setCharacterEncoding("UTF-8");
         /** 设置这个参数为有问题*/
 //        viewResolver.setViewNames(new String[] {"*.html", "*.xhtml"});
         return viewResolver;
@@ -82,6 +85,8 @@ public class WebConfig{
         // Template cache is true by default. Set to false if you want
         // templates to be automatically updated when modified.
         templateResolver.setCacheable(true);
+        /** 设置该参数解决thymeleaf的中文乱码的问题*/
+        templateResolver.setCharacterEncoding("UTF-8");
         return templateResolver;
     }
 
