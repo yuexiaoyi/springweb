@@ -27,7 +27,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserVO findById() {
+    public UserVO findById(int id) {
+        for (UserVO vo:
+                userList) {
+            if(vo.getId() == id){
+                return vo;
+            }
+        }
         return null;
     }
 

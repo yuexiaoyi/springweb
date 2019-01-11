@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserService {
      List<UserVO> listAll();
 
-     UserVO findById();
+     UserVO findById(int id);
 
      void deleteUser();
 

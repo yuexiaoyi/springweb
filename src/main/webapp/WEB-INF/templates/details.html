@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>详细信息</title>
+</head>
+<body>
+<!--    <th th:text = "${user.id}">id:</th>
+    <th th:text = "${user.name}">name:</th>
+    <th th:text = "${user.age}">age:</th>
+    <th th:text = "${user.idNum}">idNum:</th>
+    <th th:text = "${user.phone}">phone:</th>-->
+    <tr>
+        <td>id:</td>
+        <td th:text="${user.id}"></td>
+    </tr>
+    <tr>
+        <td>name:</td>
+        <td th:text="${user.name}"></td>
+    </tr>
+    <tr>
+        <td>age:</td>
+        <td th:text="${user.age}"></td>
+    </tr>
+    <tr>
+        <td>idNum:</td>
+        <td th:text="${user.idNum}"></td>
+    </tr>
+    <tr>
+        <td>phone:</td>
+        <td th:text="${user.phone}"></td>
+    </tr>
+
+</body>
+</html>
