@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ErrorController {
 
     @ExceptionHandler(UserNotFoundException.class)
-    public String handerError(){
-        return "error";
+    public String handlerError(){
+        System.out.println("error handler");
+        return "forward:/error";
     }
 }

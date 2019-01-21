@@ -13,6 +13,7 @@ import org.springframework.format.datetime.DateFormatter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
@@ -26,7 +27,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 @Configuration
 @EnableWebMvc//启动springmvc，这样requestmaping才可以使用
 @ComponentScan(value = {"com.lxy"})
-public class WebConfig{
+public class WebConfig extends WebMvcConfigurerAdapter{
 
     /** 使用注解，或者继承ApplicationContextAware*/
     @Autowired

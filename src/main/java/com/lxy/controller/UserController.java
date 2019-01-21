@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class UserController {
 
@@ -43,4 +45,10 @@ public class UserController {
    public String handerError(){
        return "error";
    }*/
+
+  @RequestMapping(value = "/error")
+  public String error(HttpServletRequest request){
+      System.out.println("error controller");
+      return "error";
+  }
 }
